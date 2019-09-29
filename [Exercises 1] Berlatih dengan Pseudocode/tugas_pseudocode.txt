@@ -1,0 +1,49 @@
+1. Newton Second Law
+
+BEGIN
+Set massaBenda to 600
+Set percepatanBenda to 2
+Set resultanGaya to massaBenda * percepatanBenda
+OUTPUT resultanGaya
+END 
+
+2. Tahun Kabisat
+
+BEGIN
+INPUT tahun
+IF(((tahun % 4 = 0) AND (tahun % 100 != 0)) OR ((tahun % 4 = 0) AND (tahun % 100 = 0) AND (tahun % 400 = 0))) THEN
+    OUTPUT "Merupakan Tahun Kabisat"
+ELSE
+    OUTPUT "Bukan Merupakan Tahun Kabisat"
+ENDIF
+END
+
+3. Laundry Day
+
+BEGIN
+Set jumlahPakaianMasuk to 0
+Set pakaianKotor to 20
+WHILE (pakaianKotor != 0) THEN
+    Set jumlahPakaianMasuk to jumlahPakaianMasuk + 1
+    Set pakaianKotor to pakaianKotor - 1
+ENDWHILE
+IF (pakaianKotor == 0) THEN 
+    OUTPUT "mesin dinyalakan, jumlah pakaian masuk sebanyak " + jumlahPakaianKotor
+ENDIF
+END
+
+4. Periksa Kuku
+
+BEGIN
+Set jumlahSiswaBelumDiperiksa to 40
+Set siswaKeSekian to 1
+WHILE (jumlahSiswaBelumDiperiksa != 0) THEN
+    IF kuku[siswaKeSekian] = "panjang" THEN
+      OUTPUT "siswa / siswi dihukum"
+    ELSE
+      OUTPUT "siswa / siswa dipuji"
+    ENDIF
+    Set siswaKesekian to siswaKesekian - 1
+ENDWHILE
+END
+
